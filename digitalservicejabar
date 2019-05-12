@@ -1,0 +1,12 @@
+<?php
+class Palindrome
+{
+    public static function isPalindrome($word)
+    {
+        $word = preg_replace('/[^a-zA-Z]/', '', $word);
+        $word = strtolower($word);
+        return $word == strrev($word);
+    }
+}
+
+echo Palindrome::isPalindrome('Deleveled');
